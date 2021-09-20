@@ -80,17 +80,17 @@ curl -d "id=2" http://127.0.0.1/api/basket/
 Просмотр информации о записи корзины с id `16`:
 
 ```shell
-curl https://127.0.0.1/api/basket/16
+curl https://127.0.0.1/api/basket/16/
 ```
 
 Обновления товара (запись корзины с id `15`) в корзине (на примере количества):
 
 ```shell
-curl -x POST -d "quantity=23" https://127.0.0.1/api/basket/15
+curl -x POST -d "quantity=23" https://127.0.0.1/api/basket/15/
 ```
 
 Удаление товара с id `3` из корзины:
 
 ```shell
-curl -x POST https://127.0.0.1/api/basket/delete/3
+curl -x POST https://127.0.0.1/api/basket/delete/3/
 ```

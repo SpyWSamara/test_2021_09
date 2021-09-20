@@ -31,7 +31,7 @@ return function (RoutingConfigurator $routes) {
             /**
              * get basket item info
              */
-            $routes->name('get')->get('{id}', function () {
+            $routes->name('get')->get('{id}/', function () {
                 Application::getInstance()->runController(
                     BasketCrud::class,
                     'getItem'
@@ -40,7 +40,7 @@ return function (RoutingConfigurator $routes) {
             /**
              * update basket item
              */
-            $routes->name('update')->post('{id}', function () {
+            $routes->name('update')->post('{id}/', function () {
                 Application::getInstance()->runController(
                     BasketCrud::class,
                     'updateItem'
@@ -49,7 +49,7 @@ return function (RoutingConfigurator $routes) {
             /**
              * remove item from basket
              */
-            $routes->name('delete')->post('delete/{id}', function () {
+            $routes->name('delete')->post('delete/{id}/', function () {
                 Application::getInstance()->runController(
                     BasketCrud::class,
                     'deleteItem'
